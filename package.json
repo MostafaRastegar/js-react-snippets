@@ -1,0 +1,59 @@
+{
+  "name": "js-react-snippets",
+  "version": "0.1.0",
+  "description": "Javascript and Reactjs snippets",
+  "main": "index.js",
+  "author": "Mostafa Rastegar <m.rastegar991@gmail.com>",
+  "license": "MIT",
+  "publisher": "MR-Rastegar",
+  "galleryBanner": {
+    "theme": "light",
+    "color": "#FFFFFF"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MostafaRastegar/js-react-snippets"
+  },
+  "icon": "images/avatar.jpg",
+  "keywords": [
+    "vscode",
+    "snippets",
+    "react",
+    "redux",
+    "react-native",
+    "es6",
+    "es7",
+    "javascript",
+    "storybook"
+  ],
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "jsx",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
