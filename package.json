@@ -2,10 +2,9 @@
   "name": "js-react-snippets",
   "version": "0.1.0",
   "description": "Javascript and Reactjs snippets",
-  "main": "index.js",
   "author": "Mostafa Rastegar <m.rastegar991@gmail.com>",
   "license": "MIT",
-  "publisher": "MR-Rastegar",
+  "publisher": "MostafaRastegar",
   "galleryBanner": {
     "theme": "light",
     "color": "#FFFFFF"
