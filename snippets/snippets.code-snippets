@@ -1,0 +1,7 @@
+{
+  "Import react": {
+    "prefix": "impr",
+    "body": ["import React from 'react';"],
+    "description": "import react"
+  }
+}
