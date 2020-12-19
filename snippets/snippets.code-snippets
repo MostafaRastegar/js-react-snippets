@@ -1,7 +1,193 @@
 {
-  "Import react": {
-    "prefix": "impr",
-    "body": ["import React from 'react';"],
-    "description": "import react"
+  // js
+  "Export Constant": {
+    "prefix": "exc",
+    "body": "export const $1 = '$1';",
+    "description": "Export const"
+  },
+  "Export Default": {
+    "prefix": "exd",
+    "body": ["export default $1;"],
+    "description": "Export default"
+  },
+  "EslintDisableLine": {
+    "prefix": "edl",
+    "body": "// eslint-disable-line",
+    "description": "Eslint Disable Line"
+  },
+  "EslintDisableNextLine": {
+    "prefix": "ednl",
+    "body": "// eslint-disable-next-line",
+    "description": "Eslint Disable Next Line"
+  },
+  "Comment Block": {
+    "prefix": "cm",
+    "body": ["/**", " * ${1}", " */"]
+  },
+  "Comment Big Block": {
+    "prefix": "cmbb",
+    "body": [
+      "/**",
+      "|--------------------------------------------------",
+      "| $1",
+      "|--------------------------------------------------",
+      "*/"
+    ]
+  },
+  "Comment Big Line": {
+    "prefix": "cmbl",
+    "body": "// ============================================================"
+  },
+  "Print Console.log": {
+    "prefix": "clg",
+    "body": [
+      "console.log('===== start $1 =======>');",
+      "console.log($1);",
+      "console.log('<==== end   =======');"
+    ],
+    "description": "Log output to console"
+  },
+  "Javascript Map": {
+    "prefix": "jmap",
+    "body": ["$1.map( $2 => $3)"],
+    "description": "Javascript Map"
+  },
+
+  // react
+  "Import React": {
+    "prefix": "imr",
+    "body": ["import React from 'react';"]
+  },
+  "Import PropTypes": {
+    "prefix": "impt",
+    "body": ["import PropTypes from 'prop-types';"],
+    "description": "Import PropTypes"
+  },
+  "React propTypes": {
+    "prefix": "rpt",
+    "body": ["$1.propTypes = {", "$2: Propstypes.$3", "}"],
+    "description": "Add propTypes"
+  },
+  "Import Styled-Components": {
+    "prefix": "ims",
+    "body": "import styled from 'styled-components';",
+    "description": "Import Styled-Components"
+  },
+  "Stateless Component": {
+    "prefix": "slc",
+    "body": [
+      "const ${TM_FILENAME_BASE} = () => (",
+      "\t$1",
+      ");",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ]
+  },
+  "Stateless Component Return": {
+    "prefix": "slcr",
+    "body": [
+      "const ${TM_FILENAME_BASE} = () => {",
+      "\treturn (",
+      "\t\t$1",
+      "\t);",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ]
+  },
+  "Styled Component": {
+    "prefix": "styc",
+    "body": ["const $1 = styled.$2`", "\t$3", "`"]
+  },
+  "Export Styled Component": {
+    "prefix": "exstyc",
+    "body": ["export const $1 = styled.$2`", "\t$3", "`"]
+  },
+  "Export Default Styled Component": {
+    "prefix": "exdstyc",
+    "body": ["export default styled.$1`", "\t$2", "`"]
+  },
+  "Import React Effect": {
+    "prefix": "imre",
+    "body": ["import React, {$1}"]
+  },
+  "React useEffect": {
+    "prefix": "rue",
+    "body": ["useEffect(() => {$1},[$2])"]
+  },
+  "React useState": {
+    "prefix": "rus",
+    "body": ["const [$1, set$2] = useState($3)"]
+  },
+  "Import ClassNames": {
+    "prefix": "imcn",
+    "body": ["import classNames from 'classnames'"],
+    "description": "import classNames"
+  },
+
+  // redux
+  "Redux Reducer": {
+    "prefix": "rrd",
+    "body": [
+      "export default (state = $1, action) => {",
+      "\tswitch (action.type) {",
+      "\t\tcase $2:",
+      "\t\t\t$3",
+      "\t\tdefault:",
+      "\t\t\treturn state;",
+      "\t}",
+      "};"
+    ]
+  },
+  "Redux Pure Function": {
+    "prefix": "rpf",
+    "body": [
+      "export const $1 = '$1';",
+      "",
+      "export function $2($3) {",
+      "\treturn {",
+      "\t\ttype: $1,",
+      "\t\t$3",
+      "\t}",
+      "}"
+    ]
+  },
+  "Redux Pure Function Const": {
+    "prefix": "rpc",
+    "body": [
+      "export const $1 = '$1';",
+      "",
+      "export const $2 = $3 => ({",
+      "\ttype: $1,",
+      "\t$3",
+      "});"
+    ]
+  },
+  "Import Connect From React-redux": {
+    "prefix": "imrcnn",
+    "body": "import { connect } from 'react-redux';"
+  },
+  "Export Redux Connect": {
+    "prefix": "exrcnn",
+    "body": [
+      "export default connect(",
+      "mapStateToProps",
+      "mapDispatchToProps",
+      ")($1)"
+    ]
+  },
+
+  // test
+  "Test": {
+    "prefix": "tt",
+    "body": ["test('$1', () => {", "\t$2", "});"]
+  },
+  "Test Describe": {
+    "prefix": "tdesc",
+    "body": ["describe('$1', () => {", "\t$2", "});"]
+  },
+  "Test it": {
+    "prefix": "tit",
+    "body": ["it('should $1', $2($3) => {", "\t$4", "});"]
   }
 }
