@@ -10,22 +10,51 @@
     "body": ["export default $1;"],
     "description": "Export default"
   },
-  "EslintDisableLine": {
+  "Export Class": {
+    "prefix": "excls",
+    "body": "export default class ${1:className} {\n\t$0\n};\n",
+    "description": "Export default class in ES6 syntax"
+  },
+  "Export Class Extends": {
+    "prefix": "exclse",
+    "body": "export default class ${1:className} extends ${2:baseclassName} {\n\t$0\n};\n",
+    "description": "Export default class which extends a base one in ES6 syntax"
+  },
+
+  "Export Named Function": {
+    "prefix": "exnfn",
+    "body": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n};\n",
+    "description": "Export named function in ES6 syntax"
+  },
+  "Export Named Variable": {
+    "prefix": "exnv",
+    "body": "export const ${1:exportVariable} = ${2:localVariable};\n",
+    "description": "Export named variable in ES6 syntax"
+  },
+
+  "Module Exports": {
+    "prefix": "mdex",
+    "body": "module.exports = {\n\t$0\n};\n",
+    "description": "Module exports from Common JS, node syntax at ES6"
+  },
+
+  "Eslint Disable Line": {
     "prefix": "edl",
     "body": "// eslint-disable-line",
     "description": "Eslint Disable Line"
   },
-  "EslintDisableNextLine": {
+  "Eslint Disable Next Line": {
     "prefix": "ednl",
     "body": "// eslint-disable-next-line",
     "description": "Eslint Disable Next Line"
   },
+
   "Comment Block": {
     "prefix": "cm",
     "body": ["/**", " * ${1}", " */"]
   },
   "Comment Big Block": {
-    "prefix": "cmbb",
+    "prefix": "cmb",
     "body": [
       "/**",
       "|--------------------------------------------------",
@@ -36,8 +65,9 @@
   },
   "Comment Big Line": {
     "prefix": "cmbl",
-    "body": "// ============================================================"
+    "body": "// ======================= $1 =============================="
   },
+
   "Print Console.log": {
     "prefix": "clg",
     "body": [
@@ -47,10 +77,130 @@
     ],
     "description": "Log output to console"
   },
+  "Console Log Object": {
+    "prefix": "clgo",
+    "body": "console.log('${1:object} :>> ', ${1:object});",
+    "description": "Displays an object in the console with its name"
+  },
+  "Console Table": {
+    "prefix": "clt",
+    "body": "console.table(${1:object});",
+    "description": "Displays tabular data as a table"
+  },
+  "Console Clear": {
+    "prefix": "clc",
+    "body": "console.clear();",
+    "description": "Clears the console"
+  },
+
+  "Then Catch": {
+    "prefix": "thc",
+    "body": ".then((${1:result}) => {\n\t${2}\n}).catch((${3:err}) => {\n\t${4}\n});",
+    "description": "Add the .then and .catch methods to handle promises"
+  },
+
+  "SetTimeOut": {
+    "prefix": "sto",
+    "body": "setTimeout(() => {\n\t${2}\n}, ${1:delayInms});",
+    "description": "Executes the given function after the specified delay in ES6 syntax"
+  },
+
+  "SetInterval": {
+    "prefix": "sti",
+    "body": "setInterval(() => {\n\t${2}\n}, ${0:intervalInms});",
+    "description": "Executes the given function at specified intervals in ES6 syntax"
+  },
+
+  "Destructing Object": {
+    "prefix": "deso",
+    "body": "const {${2:propertyName}} = ${1:objectToDestruct};",
+    "description": "Creates and assigns a local variable using object destructing"
+  },
+  "Destructing Array": {
+    "prefix": "desr",
+    "body": "const [${2:propertyName}] = ${1:arrayToDestruct};",
+    "description": "Creates and assigns a local variable using array destructing"
+  },
+
+  "Named Function": {
+    "prefix": "nfn",
+    "body": "const ${1:name} = (${2:params}) => {\n\t${3}\n}",
+    "description": "Creates a named function in ES6 syntax"
+  },
+  "Anonymous Function": {
+    "prefix": "afn",
+    "body": "(${1:params}) => {\n\t${2}\n}",
+    "description": "Creates an anonymous function in ES6 syntax"
+  },
+
+  "ForEach": {
+    "prefix": "fre",
+    "body": "${1:array}.forEach(${2:currentItem} => {\n\t${0}\n});",
+    "description": "Creates a forEach statement in ES6 syntax"
+  },
+
+  "Property Get": {
+    "prefix": "pget",
+    "body": "get ${1:propertyName}() {\n\treturn this.${0};\n}",
+    "description": "Creates a getter property inside a class in ES6 syntax"
+  },
+  "Property Set": {
+    "prefix": "pset",
+    "body": "set ${1:propertyName}(${2:value}) {\n\t${0};\n}",
+    "description": "Creates a setter property inside a class in ES6 syntax"
+  },
+  "method": {
+    "prefix": "met",
+    "body": "${1:methodName}(${2:params}) {\n\t${0}\n}",
+    "description": "Creates a method inside a class in ES6 syntax"
+  },
+
   "Javascript Map": {
     "prefix": "jmap",
     "body": ["$1.map( $2 => $3)"],
     "description": "Javascript Map"
+  },
+
+  "Require To Const": {
+    "prefix": "reqc",
+    "body": "const ${1:packageName} = require('${1:package}');$0",
+    "description": "Require a package to const"
+  },
+  "Require": {
+    "prefix": "req",
+    "body": "require('${1:package}');",
+    "description": "Require a package"
+  },
+  "Import As": {
+    "prefix": "ima",
+    "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
+    "description": "Imports a specific portion of the module by assigning a local alias in ES6 syntax"
+  },
+  "Import Everything": {
+    "prefix": "ime",
+    "body": "import * as ${2:alias} from '${1:module}';$0",
+    "description": "Imports everything as alias from the module in ES6 syntax"
+  },
+  "Import": {
+    "prefix": "imp",
+    "body": "import ${2:moduleName} from '${1:module}';$0",
+    "description": "Imports entire module statement in ES6 syntax"
+  },
+  "Import Destructing": {
+    "prefix": "imdes",
+    "body": "import { $2 } from '${1:module}';$0",
+    "description": "Imports only a portion of the module in ES6 syntax"
+  },
+  "Import No Module Name": {
+    "prefix": "imn",
+    "body": "import '${1:module}';$0",
+    "description": "Imports entire module in ES6 syntax without module name"
+  },
+
+  "Constructor": {
+    "prefix": "con",
+    "body": "constructor(${1:params}) {\n\t${0}\n}",
+    "description": "Add default constructor in a class in ES6 syntax"
   },
 
   // react
@@ -68,11 +218,13 @@
     "body": ["$1.propTypes = {", "$2: Propstypes.$3", "}"],
     "description": "Add propTypes"
   },
+
   "Import Styled-Components": {
     "prefix": "ims",
     "body": "import styled from 'styled-components';",
     "description": "Import Styled-Components"
   },
+
   "Stateless Component": {
     "prefix": "slc",
     "body": [
@@ -83,6 +235,7 @@
       "export default ${TM_FILENAME_BASE};"
     ]
   },
+
   "Stateless Component Return": {
     "prefix": "slcr",
     "body": [
@@ -140,7 +293,7 @@
     ]
   },
   "Redux Pure Function": {
-    "prefix": "rpf",
+    "prefix": "rpfn",
     "body": [
       "export const $1 = '$1';",
       "",
@@ -153,7 +306,7 @@
     ]
   },
   "Redux Pure Function Const": {
-    "prefix": "rpc",
+    "prefix": "rpfnc",
     "body": [
       "export const $1 = '$1';",
       "",
@@ -164,11 +317,11 @@
     ]
   },
   "Import Connect From React-redux": {
-    "prefix": "imrcnn",
+    "prefix": "imrdcn",
     "body": "import { connect } from 'react-redux';"
   },
   "Export Redux Connect": {
-    "prefix": "exrcnn",
+    "prefix": "exrdcn",
     "body": [
       "export default connect(",
       "mapStateToProps",
@@ -183,7 +336,7 @@
     "body": ["test('$1', () => {", "\t$2", "});"]
   },
   "Test Describe": {
-    "prefix": "tdesc",
+    "prefix": "tdes",
     "body": ["describe('$1', () => {", "\t$2", "});"]
   },
   "Test it": {
