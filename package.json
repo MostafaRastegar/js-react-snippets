@@ -1,0 +1,59 @@
+{
+  "name": "mr-js-react-redux-snippets",
+  "displayName": "mr-js-react-redux-snippets",
+  "description": "Snippets for javascript and react-redux",
+  "version": "0.1.0",
+  "author": "Mostafa Rastegar <m.rastegar991@gmail.com>",
+  "license": "MIT",
+  "publisher": "MostafaRastegar",
+  "galleryBanner": {
+    "theme": "light",
+    "color": "#FFFFFF"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MostafaRastegar/js-react-snippets"
+  },
+  "icon": "images/avatar.jpg",
+  "keywords": [
+    "vscode",
+    "snippets",
+    "react",
+    "redux",
+    "react-native",
+    "es6",
+    "es7",
+    "javascript",
+    "storybook"
+  ],
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "jsx",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
