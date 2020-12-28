@@ -228,24 +228,24 @@
   "Stateless Component": {
     "prefix": "slc",
     "body": [
-      "const ${TM_FILENAME_BASE} = () => (",
+      "const ${$1:componentName} = () => (",
       "\t$1",
-      ");",
+      ")",
       "",
-      "export default ${TM_FILENAME_BASE};"
+      "export default ${$1:componentName};"
     ]
   },
 
   "Stateless Component Return": {
     "prefix": "slcr",
     "body": [
-      "const ${TM_FILENAME_BASE} = () => {",
+      "const ${$1:componentName} = () => {",
       "\treturn (",
       "\t\t$1",
       "\t);",
       "}",
       "",
-      "export default ${TM_FILENAME_BASE};"
+      "export default ${$1:componentName};"
     ]
   },
   "Styled Component": {
@@ -275,7 +275,7 @@
   "Import ClassNames": {
     "prefix": "imcn",
     "body": ["import classNames from 'classnames'"],
-    "description": "import classNames"
+    "description": "Import classNames"
   },
 
   // redux

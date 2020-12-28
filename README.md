@@ -76,4 +76,17 @@ Below is a list of all available snippets and the triggers of each one.
 |   `clt` | Displays tabular data as a table                          |
 |   `clc` | Clears the console                                        |
 
+### Reactjs
+
+| Trigger | Content                                                                                                 |
+| ------: | ------------------------------------------------------------------------------------------------------- |
+|   `imr` | Import react package `import React from 'react'`                                                        |
+|   `ims` | Import Styled-Components `import styled from 'styled-components'`                                       |
+|  `imcn` | Import classNames `import classNames from 'classnames'`                                                 |
+|  `impt` | Import PropTypes `import PropTypes from 'prop-types'`                                                   |
+|   `rpt` | Add propTypes" `ComponentName.propTypes = {propsName: Propstypes.string}`                               |
+|   `slc` | Stateless Component `const componentName = () => () export default componentName;`                      |
+|  `slcr` | Stateless Component with return `const componentName = () => {return ()} export default componentName;` |
+|  `styc` | Styled Component `const StyledName = styled.TagName'margin:0' `                                         |
+
 [code]: https://code.visualstudio.com/
