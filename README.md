@@ -78,15 +78,32 @@ Below is a list of all available snippets and the triggers of each one.
 
 ### Reactjs
 
-| Trigger | Content                                                                                                 |
-| ------: | ------------------------------------------------------------------------------------------------------- |
-|   `imr` | Import react package `import React from 'react'`                                                        |
-|   `ims` | Import Styled-Components `import styled from 'styled-components'`                                       |
-|  `imcn` | Import classNames `import classNames from 'classnames'`                                                 |
-|  `impt` | Import PropTypes `import PropTypes from 'prop-types'`                                                   |
-|   `rpt` | Add propTypes" `ComponentName.propTypes = {propsName: Propstypes.string}`                               |
-|   `slc` | Stateless Component `const componentName = () => () export default componentName;`                      |
-|  `slcr` | Stateless Component with return `const componentName = () => {return ()} export default componentName;` |
-|  `styc` | Styled Component `const StyledName = styled.TagName'margin:0' `                                         |
+|   Trigger | Content                                                                                                 |
+| --------: | ------------------------------------------------------------------------------------------------------- |
+|     `imr` | Import react package `import React from 'react'`                                                        |
+|    `imre` | Import react Effect `import React, { effectName } from 'react'`                                         |
+|     `ims` | Import Styled-Components `import styled from 'styled-components'`                                       |
+|    `imcn` | Import classNames `import classNames from 'classnames'`                                                 |
+|    `impt` | Import PropTypes `import PropTypes from 'prop-types'`                                                   |
+|  `imrdcn` | React useState Hooks `import { connect } from 'react-redux'`                                            |
+|     `rpt` | Add propTypes" `ComponentName.propTypes = {propsName: Propstypes.string}`                               |
+|     `slc` | Stateless Component `const componentName = () => (other styles) export default componentName;`          |
+|    `slcr` | Stateless Component with return `const componentName = () => {return ()} export default componentName;` |
+|    `styc` | Styled Component `const StyledName = styled.TagName'x:y' `                                              |
+| `exdstyc` | Styled Component `export default styled.TagName'x:y`                                                    |
+|     `rue` | React useEffect Hooks `useEffect(() => {$1},[$2])`                                                      |
+|     `rus` | React useState Hooks `const [x, setX] = useState('sample')`                                             |
+|     `rrd` | Redux Reducer                                                                                           |
+|    `rpfn` | Redux Pure Function Const                                                                               |
+|  `exrdcn` | Export Redux Connect                                                                                    |
+
+### Test methods
+
+| Trigger | Content                                              |
+| ------: | ---------------------------------------------------- |
+|    `tt` | Test method `test('description', () => {})`          |
+|  `rdes` | Test describe method `test('describe', () => {})`    |
+|  `rdes` | Test describe method `it('should sample', () => {})` |
+|   `tit` | Test it method `it('should sample', () => {})`       |
 
 [code]: https://code.visualstudio.com/
