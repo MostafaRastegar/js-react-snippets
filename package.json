@@ -1,8 +1,8 @@
 {
-  "name": "mr-js-react-redux-snippets",
-  "displayName": "mr-js-react-redux-snippets",
+  "name": "js-react-snippets",
+  "displayName": "js-react-snippets",
   "description": "Snippets for javascript and react-redux",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Mostafa Rastegar <m.rastegar991@gmail.com>",
   "license": "MIT",
   "publisher": "MostafaRastegar",
