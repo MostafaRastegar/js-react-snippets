@@ -2,39 +2,39 @@
   // js
   "Export Constant": {
     "prefix": "exc",
-    "body": "export const $1 = '$1';",
+    "body": "export const ${1:name} = '${2:value}'",
     "description": "Export const"
   },
   "Export Default": {
     "prefix": "exd",
-    "body": ["export default $1;"],
+    "body": ["export default ${1:name}"],
     "description": "Export default"
   },
   "Export Class": {
     "prefix": "excls",
-    "body": "export default class ${1:className} {\n\t$0\n};\n",
+    "body": "export default class ${1:className} {\n\t$0\n}\n",
     "description": "Export default class in ES6 syntax"
   },
   "Export Class Extends": {
     "prefix": "exclse",
-    "body": "export default class ${1:className} extends ${2:baseclassName} {\n\t$0\n};\n",
+    "body": "export default class ${1:className} extends ${2:baseClassName} {\n\t$0\n}\n",
     "description": "Export default class which extends a base one in ES6 syntax"
   },
 
   "Export Named Function": {
     "prefix": "exnfn",
-    "body": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n};\n",
+    "body": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n}\n",
     "description": "Export named function in ES6 syntax"
   },
   "Export Named Variable": {
     "prefix": "exnv",
-    "body": "export const ${1:exportVariable} = ${2:localVariable};\n",
+    "body": "export const ${1:exportVariable} = ${2:localVariable}\n",
     "description": "Export named variable in ES6 syntax"
   },
 
   "Module Exports": {
     "prefix": "mdex",
-    "body": "module.exports = {\n\t$0\n};\n",
+    "body": "module.exports = {\n\t$0\n}\n",
     "description": "Module exports from Common JS, node syntax at ES6"
   },
 
@@ -51,28 +51,28 @@
 
   "Comment Block": {
     "prefix": "cm",
-    "body": ["/**", " * ${1}", " */"]
+    "body": ["/**", " * ${1:comment}", " */"]
   },
   "Comment Big Block": {
     "prefix": "cmb",
     "body": [
       "/**",
       "|--------------------------------------------------",
-      "| $1",
+      "| ${1:comment}",
       "|--------------------------------------------------",
       "*/"
     ]
   },
   "Comment Big Line": {
     "prefix": "cmbl",
-    "body": "// ======================= $1 =============================="
+    "body": "// =============== ${1:comment} ==============="
   },
 
   "Print Console.log": {
     "prefix": "clg",
     "body": [
-      "console.log('===== start $1 =======>');",
-      "console.log($1);",
+      "console.log('===== start ${1:log} =======>');",
+      "console.log(${2:log});",
       "console.log('<==== end   =======');"
     ],
     "description": "Log output to console"
@@ -84,7 +84,7 @@
   },
   "Console Table": {
     "prefix": "clt",
-    "body": "console.table(${1:object});",
+    "body": "console.table(${1:array});",
     "description": "Displays tabular data as a table"
   },
   "Console Clear": {
@@ -95,30 +95,30 @@
 
   "Then Catch": {
     "prefix": "thc",
-    "body": ".then((${1:result}) => {\n\t${2}\n}).catch((${3:err}) => {\n\t${4}\n});",
+    "body": ".then((${1:result}) => {\n\t${2}\n}).catch((${3:err}) => {\n\t${4}\n})",
     "description": "Add the .then and .catch methods to handle promises"
   },
 
   "SetTimeOut": {
     "prefix": "sto",
-    "body": "setTimeout(() => {\n\t${2}\n}, ${1:delayInms});",
+    "body": "setTimeout(() => {\n\t${2}\n}, ${1:delayInms})",
     "description": "Executes the given function after the specified delay in ES6 syntax"
   },
 
   "SetInterval": {
     "prefix": "sti",
-    "body": "setInterval(() => {\n\t${2}\n}, ${0:intervalInms});",
+    "body": "setInterval(() => {\n\t${2}\n}, ${0:intervalInms})",
     "description": "Executes the given function at specified intervals in ES6 syntax"
   },
 
   "Destructing Object": {
     "prefix": "deso",
-    "body": "const {${2:propertyName}} = ${1:objectToDestruct};",
+    "body": "const {${2:propertyName}} = ${1:objectToDestruct}",
     "description": "Creates and assigns a local variable using object destructing"
   },
   "Destructing Array": {
     "prefix": "desr",
-    "body": "const [${2:propertyName}] = ${1:arrayToDestruct};",
+    "body": "const [${2:propertyName}] = ${1:arrayToDestruct}",
     "description": "Creates and assigns a local variable using array destructing"
   },
 
@@ -135,18 +135,18 @@
 
   "ForEach": {
     "prefix": "fre",
-    "body": "${1:array}.forEach(${2:currentItem} => {\n\t${0}\n});",
+    "body": "${1:array}.forEach(${2:currentItem} => {\n\t${0}\n})",
     "description": "Creates a forEach statement in ES6 syntax"
   },
 
   "Property Get": {
     "prefix": "pget",
-    "body": "get ${1:propertyName}() {\n\treturn this.${0};\n}",
+    "body": "get ${1:propertyName}() {\n\treturn this.${0:value}\n}",
     "description": "Creates a getter property inside a class in ES6 syntax"
   },
   "Property Set": {
     "prefix": "pset",
-    "body": "set ${1:propertyName}(${2:value}) {\n\t${0};\n}",
+    "body": "set ${1:propertyName}(${2:value}) {\n\t${0}\n}",
     "description": "Creates a setter property inside a class in ES6 syntax"
   },
   "method": {
@@ -157,43 +157,43 @@
 
   "Javascript Map": {
     "prefix": "jmap",
-    "body": ["$1.map( $2 => $3)"],
+    "body": ["${1:array}.map( ${2:item} => ${3:customCode})"],
     "description": "Javascript Map"
   },
 
   "Require To Const": {
     "prefix": "reqc",
-    "body": "const ${1:packageName} = require('${1:package}');$0",
+    "body": "const ${2:packageName} = require('${1:package}')$0",
     "description": "Require a package to const"
   },
   "Require": {
     "prefix": "req",
-    "body": "require('${1:package}');",
+    "body": "require('${1:package}')",
     "description": "Require a package"
   },
   "Import As": {
     "prefix": "ima",
-    "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
+    "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}'$0",
     "description": "Imports a specific portion of the module by assigning a local alias in ES6 syntax"
   },
   "Import Everything": {
     "prefix": "ime",
-    "body": "import * as ${2:alias} from '${1:module}';$0",
+    "body": "import * as ${2:alias} from '${1:module}'$0",
     "description": "Imports everything as alias from the module in ES6 syntax"
   },
   "Import": {
     "prefix": "imp",
-    "body": "import ${2:moduleName} from '${1:module}';$0",
+    "body": "import ${2:moduleName} from '${1:module}'$0",
     "description": "Imports entire module statement in ES6 syntax"
   },
   "Import Destructing": {
     "prefix": "imdes",
-    "body": "import { $2 } from '${1:module}';$0",
+    "body": "import { $2 } from '${1:module}'$0",
     "description": "Imports only a portion of the module in ES6 syntax"
   },
   "Import No Module Name": {
     "prefix": "imn",
-    "body": "import '${1:module}';$0",
+    "body": "import '${1:module}'$0",
     "description": "Imports entire module in ES6 syntax without module name"
   },
 
@@ -206,71 +206,76 @@
   // react
   "Import React": {
     "prefix": "imr",
-    "body": ["import React from 'react';"]
+    "body": ["import React from 'react'"]
   },
   "Import PropTypes": {
     "prefix": "impt",
-    "body": ["import PropTypes from 'prop-types';"],
+    "body": ["import PropTypes from 'prop-types'"],
     "description": "Import PropTypes"
   },
   "React propTypes": {
     "prefix": "rpt",
-    "body": ["$1.propTypes = {", "$2: Propstypes.$3", "}"],
+    "body": [
+      "${1:componentName}.propTypes = {",
+      "${2:property}: Propstypes.${3:value}",
+      "}"
+    ],
     "description": "Add propTypes"
   },
 
   "Import Styled-Components": {
     "prefix": "ims",
-    "body": "import styled from 'styled-components';",
+    "body": "import styled from 'styled-components'",
     "description": "Import Styled-Components"
   },
 
   "Stateless Component": {
     "prefix": "slc",
     "body": [
-      "const ${$1:componentName} = () => (",
-      "\t$1",
+      "const ${1:componentName} = () => (",
+      "\t$2",
       ")",
       "",
-      "export default ${$1:componentName};"
+      "export default ${1:componentName}"
     ]
   },
 
   "Stateless Component Return": {
     "prefix": "slcr",
     "body": [
-      "const ${$1:componentName} = () => {",
+      "const ${1:componentName} = () => {",
       "\treturn (",
-      "\t\t$1",
+      "\t\t$2",
       "\t);",
       "}",
       "",
-      "export default ${$1:componentName};"
+      "export default ${1:componentName}"
     ]
   },
+
   "Styled Component": {
     "prefix": "styc",
-    "body": ["const $1 = styled.$2`", "\t$3", "`"]
+    "body": ["const ${1:componentName} = styled.${2:name}`", "\t$3", "`"]
   },
   "Export Styled Component": {
     "prefix": "exstyc",
-    "body": ["export const $1 = styled.$2`", "\t$3", "`"]
+    "body": ["export const ${1:componentName} = styled.${2:name}`", "\t$3", "`"]
   },
   "Export Default Styled Component": {
     "prefix": "exdstyc",
-    "body": ["export default styled.$1`", "\t$2", "`"]
+    "body": ["export default styled.${1:elementName}`", "\t$2", "`"]
   },
   "Import React Effect": {
     "prefix": "imre",
-    "body": ["import React, {$1} from 'react'"]
+    "body": ["import React, {${1:effectName}} from 'react'"]
   },
   "React useEffect": {
     "prefix": "rue",
-    "body": ["useEffect(() => {$1},[$2])"]
+    "body": ["useEffect(() => {$1},[${2:dependency}])"]
   },
   "React useState": {
     "prefix": "rus",
-    "body": ["const [$1, set$2] = useState($3)"]
+    "body": ["const [${1:value}, set${2:Value}] = useState(${3:value})"]
   },
   "Import ClassNames": {
     "prefix": "imcn",

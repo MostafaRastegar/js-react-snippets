@@ -56,8 +56,8 @@ Below is a list of all available snippets and the triggers of each one.
 |   `fre` | forEach loop in ES6 syntax `array.forEach(currentItem => {})` |
 |  `jmap` | Javascript map `arr.map( item => item.id)`                    |
 |   `thc` | Add the .then and .catch methods to handle promises           |
-|   `sti` | Set timeout helper method `setTimeout(() => {});`             |
-|   `sto` | Set interval helper method `setInterval(() => {});`           |
+|   `sto` | Set timeout helper method `setTimeout(() => {});`             |
+|   `sti` | Set interval helper method `setInterval(() => {});`           |
 |  `deso` | destructing object syntax `const {rename} = fs`               |
 |  `desr` | destructing array syntax `const [first, second] = [1,2]`      |
 |   `afn` | creates an anonymous function `(params) => {}`                |
