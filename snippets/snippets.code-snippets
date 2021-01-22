@@ -163,7 +163,7 @@
 
   "Require To Const": {
     "prefix": "reqc",
-    "body": "const ${1:packageName} = require('${1:package}')$0",
+    "body": "const ${2:packageName} = require('${1:package}')$0",
     "description": "Require a package to const"
   },
   "Require": {
