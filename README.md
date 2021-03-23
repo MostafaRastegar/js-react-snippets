@@ -8,7 +8,7 @@ This extension contains code snippets for Reactjs and JavaScript in ES6 syntax f
 
 ## Installation
 
-Install from this [link](https://google.com)
+Install from this [link](https://marketplace.visualstudio.com/items?itemName=MostafaRastegar.js-react-snippets)
 
 ## Supported languages (file extensions)
 
