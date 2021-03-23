@@ -217,7 +217,7 @@
     "prefix": "rpt",
     "body": [
       "${1:componentName}.propTypes = {",
-      "${2:property}: Propstypes.${3:value}",
+      "${2:property}: PropTypes.${3:value}",
       "}"
     ],
     "description": "Add propTypes"
