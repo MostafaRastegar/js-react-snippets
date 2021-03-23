@@ -215,7 +215,7 @@
   },
   "React propTypes": {
     "prefix": "rpt",
-    "body": ["$1.propTypes = {", "$2: Propstypes.$3", "}"],
+    "body": ["$1.propTypes = {", "$2: PropTypes.$3", "}"],
     "description": "Add propTypes"
   },
 
