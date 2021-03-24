@@ -86,14 +86,14 @@ Below is a list of all available snippets and the triggers of each one.
 |    `impt` | Import PropTypes `import PropTypes from 'prop-types'`                                           |
 |  `imrdcn` | React useState Hooks `import { connect } from 'react-redux'`                                    |
 |     `rpt` | Add propTypes" `componentName.propTypes = {property: Propstypes.value }`                        |
-|     `slc` | Stateless Component `const componentName = () => (other styles) export default componentName;`  |
+|     `slc` | Stateless Component `const componentName = () => (other styles) export default componentName`   |
 |    `slcr` | Stateless Component with return `const componentName = () => () export default componentName`   |
 |    `styc` | Styled Component `const componentName = styled.name''`                                          |
 | `exdstyc` | Styled Component `export default styled.elementName''`                                          |
 |     `rue` | React useEffect Hooks `useEffect(() => {},[dependency])`                                        |
 |     `rus` | React useState Hooks `const [value, setValue] = useState(value)`                                |
 |     `rrd` | Redux Reducer                                                                                   |
-|    `rpfn` | Redux Pure Function Const`                                                                      |
+|    `rpfn` | Redux Pure Function                                                                             |
 |  `exrdcn` | Export Redux Connect ` export default connect( mapStateToProps mapDispatchToProps )(Component)` |
 
 ### Test methods
