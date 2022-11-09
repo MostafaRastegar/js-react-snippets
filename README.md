@@ -65,15 +65,16 @@ Below is a list of all available snippets and the triggers of each one.
 
 ### Console methods
 
-| Trigger | Content                                                                               |
-| ------: | ------------------------------------------------------------------------------------- |
-|    `cm` | Comment Block                                                                         |
-|   `cmb` | Comment Big Block                                                                     |
-|  `cmbl` | Comment Big Line                                                                      |
-|   `clg` | Print Console.log `console.log('object :>> ', object);`                               |
-|  `clgo` | Displays an object in the console with its name `console.log('object :>> ', object);` |
-|   `clt` | Displays tabular data as a table `console.table(array);`                              |
-|   `clc` | Clears the console `console.clear();`                                                 |
+| Trigger | Content                                                                                                                                 |
+| ------: | --------------------------------------------------------------------------------------------------------------------------------------- |
+|    `cm` | Comment Block                                                                                                                           |
+|   `cmb` | Comment Big Block                                                                                                                       |
+|  `cmbl` | Comment Big Line                                                                                                                        |
+|   `clg` | Print Console.log `console.log('object :>> ', object);`                                                                                 |
+|  `clgo` | Displays an object in the console with its name `console.log('object :>> ', object);`                                                   |
+|   `clt` | Displays tabular data as a table `console.table(array);`                                                                                |
+|   `clc` | Clears the console `console.clear();`                                                                                                   |
+|  `clti` | Log time of run for input function `console.time('${1:log}'); (function(){\n ${2:// yourFunction} \n})(); console.timeEnd('${1:log}');` |
 
 ### Reactjs
 
