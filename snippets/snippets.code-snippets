@@ -92,6 +92,15 @@
     "body": "console.clear();",
     "description": "Clears the console"
   },
+  "Print Console.time": {
+    "prefix": "clti",
+    "body": [
+      "console.time('${1:log}');",
+      "(function(){\n ${2:// yourFunction} \n})()",
+      "console.timeEnd('${1:log}');"
+    ],
+    "description": "Log time of run for input function"
+  },
 
   "Then Catch": {
     "prefix": "thc",
